@@ -34,4 +34,4 @@ SELECT s.StudentName, AVG(m.Mark) avg FROM mark m
     JOIN quanlysinhvien.student s on s.StudentID = m.StudentID
     JOIN quanlysinhvien.subject s2 on s2.SubID = m.SubID
 GROUP BY s.StudentName
-HAVING AVG(Mark) >= ALL (SELECT AVG(Mark) FROM mark m GROUP BY m.StudentID); #Save this
+HAVING avg >= ALL (SELECT AVG(Mark) FROM mark m GROUP BY m.StudentID); #Save this
