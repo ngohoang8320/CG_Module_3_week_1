@@ -5,8 +5,8 @@ SELECT * FROM subject;
 
 SELECT * FROM subject
 WHERE Credit = (SELECT MAX(Credit) FROM subject);
-
 #------------------------
+
 SELECT * FROM mark;
 
 SELECT s.StudentName, m.Mark FROM student s
